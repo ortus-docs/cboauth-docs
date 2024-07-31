@@ -1,12 +1,10 @@
 # Initiating SSO
 
-There are two options for starting a SSO workflow. You can either present options to your user or initiate the flow programmatically.&#x20;
-
-### Options
-
-Ultimately providing SSO choices to your user will be an application specific task. That being said, many applications present their SSO integration in a similar fashion choosing to display some buttons which each initiate a SSO workflow with a different provider.&#x20;
+There are two options for starting a SSO workflow. You can either present a UI with options for your user to pick from or initiate the flow programmatically.&#x20;
 
 ### Displaying Choices to the User
+
+Ultimately providing SSO choices to your user will be an application specific task. That being said, many applications present their SSO integration in a similar fashion choosing to display some buttons which each initiate a SSO workflow with a different provider.&#x20;
 
 This can be set up fairly easily using the `ProviderService`
 
