@@ -6,6 +6,9 @@ An example  `config/cbssso.cfc` file.
 component {
   public any function configure(){
     return {
+      // enable this for cbAuth integration
+      "enableCBAuthIntegration": false,
+      
       // where cbSSO should redirect when a SSO has an unhandled error
       "errorRedirect": "",
       

@@ -1,6 +1,7 @@
 # Table of contents
 
 * [Introduction](README.md)
+* [Quick Start](quick-start.md)
 
 ## Usage
 
@@ -20,6 +21,6 @@
   * [MircosoftSAMLProvider](providers/built-in-providers/mircosoftsamlprovider.md)
 * [Custom Providers](providers/custom-providers.md)
 
-## cbSecurity Integration
+## cbAuth Integration
 
-* [UserService Additions](cbsecurity-integration/userservice-additions.md)
+* [Enabling Integration](cbauth-integration/enabling-integration.md)
