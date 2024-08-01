@@ -60,7 +60,7 @@ Apache 2 License: [http://www.apache.org/licenses/LICENSE-2.0](https://www.apach
 
 ## Important Links <a href="#important-links" id="important-links"></a>
 
-* Code: [https://github.com/coldbox-modules/cb](https://github.com/coldbox-modules/cbsso)[sso](https://github.com/coldbox-modules/cbsso)
+* Code: [https://github.com/coldbox-modules/cbsso](https://github.com/coldbox-modules/cbsso)
 * Issues: [https://github.com/coldbox-modules/cbsso/issues](https://github.com/coldbox-modules/cbsso/issues)
 
 ## Professional Open Source <a href="#professional-open-source" id="professional-open-source"></a>
