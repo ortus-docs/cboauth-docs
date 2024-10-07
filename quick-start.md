@@ -33,7 +33,7 @@ Once your app is registered you will see a screen with your client credentials. 
 
 This can be configured in either your `ColdBox.cfc` or in `config/modules/cbSSO.cfc`
 
-```cfscript
+```json5
 moduleSettings = {
   "cbsso" : {
     "providers" : [
@@ -49,7 +49,7 @@ moduleSettings = {
 
 ### Implement CBSSOAuthorization Event
 
-Now that our app is registered with GitHub and our client credentials have been configured in our module settings we need to handle the event. This is done through an interception point.
+Now that our app is registered with GitHub and our client credentials have been configured in our module settings, we must handle the event. This is done through an interception point.
 
 ```cfscript
 public void function CBSSOAuthorization( event, data ){
