@@ -19,7 +19,9 @@ component {
           // these values are configured with Microsoft and available in your app dashboard
           clientId:     "YOUR-CLIENT-ID",
           clientSecret: "YOUR-CLIENT-SECRET",
-          authEndpoint: "https://login.microsoftonline.com/YOUR-CLIENT-ID/saml2"
+          authEndpoint: "https://login.microsoftonline.com/YOUR-TENANT-ID/saml2",
+          expectedIssuer: "https://sts.windows.net/YOUR-TENANT-ID/",
+          federationMetadataURL: "https://login.microsoftonline.com/YOUR-TENANT-ID/federationmetadata/2007-06/federationmetadata.xml"
         }
       ]
     };  
