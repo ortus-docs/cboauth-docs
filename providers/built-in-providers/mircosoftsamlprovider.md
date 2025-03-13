@@ -29,4 +29,20 @@ component {
 }
 ```
 
-###
+### Additional Server Configuration
+
+If you are using the `MicrosoftSAMLProvider` you will need to add some java libraries to your server.\
+\
+If using a CommandBox `server.json` you can do that like so
+
+````
+```jsonc
+{
+    "app":{
+        // add this line to ensure the java library is loaded at the appropriate level
+        "libDirs":"modules/cbsso/lib"
+    }
+}
+```
+````
+
