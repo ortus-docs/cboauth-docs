@@ -12,7 +12,7 @@ This can be set up fairly easily using the `ProviderService`
 <!-- in views/login.cfm -->
 <cfoutput>
     <cfscript>
-        providerOptions = getInstance( "ProviderService@cbsso" ).getProviderOptions();
+        providerOptions = getInstance( "ProviderService@cbsso" ).getRenderableProviderData();
     </cfscript>
     <form action="/login">
         <h2>Login</h2>
