@@ -4,6 +4,37 @@ While most identity providers follow similar protocols there is room for each on
 
 Part of cbSSO's goal is to help hide as much of these implementation details as possible. To accomplish this, we have created the `cbsso.models.ISSOAuthorizationResponse` interface and have provided an implementation as well.
 
+### Reading the response
+
+Every provider returns an `ISSOAuthorizationResponse`. In addition to the common typed fields such as
+`getName()`, `getEmail()`, `getFirstName()`, `getLastName()`, and `getUserId()`, the response exposes the
+provider's complete claim set:
+
+* `getClaims()` returns a struct keyed by the claim name. Every value is an array so multi-valued SAML
+    attributes are preserved.
+* `getClaim( name, defaultValue )` returns the first value for a claim, or the supplied default.
+* `getNameId()` returns the SAML subject `NameID`, when one is present.
+* `getNameIdFormat()` returns the `NameID` format. Check this before treating a SAML `NameID` as a portable
+    identifier; some formats are scoped to a single application registration or session.
+
+For example:
+
+```cfscript
+var response = data.ssoAuthorizationResponse;
+
+if ( response.wasSuccessful() ) {
+    var claims = response.getClaims();
+    var groups = structKeyExists( claims, "http://schemas.microsoft.com/ws/2008/06/identity/claims/groups" )
+        ? claims[ "http://schemas.microsoft.com/ws/2008/06/identity/claims/groups" ]
+        : [];
+
+    logger.info( "Signed in #response.getEmail()# with #groups.len()# group claim value(s)" );
+}
+```
+
+For `MicrosoftSAMLProvider`, these values come only from the signed assertion that passed validation. Do not
+use `getRawResponseData()` as a source of identity claims.
+
 After a SSO workflow has been initiated eventually the identity provider will respond to the initiating application. The format of the response varies by provider. To handle the responses each provider implements a method (`processAuthorizationEvent` )that will take the response, parse it, transform it into an  `ISSOAuthorizationResponse` and return it to your app for further processing.
 
 ### Handling The ISSOAuthorizationResponse

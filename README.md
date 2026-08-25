@@ -39,6 +39,13 @@ The rest of this documentation will cover topics like
 * Custom Providers
 * Configuration
 * Accessing User Data
+* SAML request replay protection and CacheBox configuration
+
+The Microsoft SAML provider validates the signed assertion and binds it to the AuthNRequest that started the
+login. The resulting response exposes the complete claim set, SAML `NameID`, and `NameID` format. See
+[Configuration](usage/configuration.md#saml-request-replay-cache), [MicrosoftSAMLProvider](providers/built-in-providers/mircosoftsamlprovider.md#validation-and-replay-protection),
+and [Handling the Identity Provider Response](usage/handling-the-identity-provider-response.md#reading-the-response)
+for details.
 
 ## Versioning <a href="#versioning" id="versioning"></a>
 

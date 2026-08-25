@@ -18,7 +18,7 @@
   * [FacebookProvider](providers/built-in-providers/facebookprovider.md)
   * [GitHubProvider](providers/built-in-providers/githubprovider.md)
   * [GoogleProvider](providers/built-in-providers/googleprovider.md)
-  * [MircosoftSAMLProvider](providers/built-in-providers/mircosoftsamlprovider.md)
+  * [MicrosoftSAMLProvider](providers/built-in-providers/mircosoftsamlprovider.md)
 * [Custom Providers](providers/custom-providers.md)
 
 ## cbAuth Integration
